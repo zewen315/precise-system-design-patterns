@@ -8,9 +8,12 @@
 
 ### Shell
 
-### Users & Groups
+(shell.md, shell-script.md)
+- What is a shell
+- Config shell
+- Job control
 
-Remove SSH
+### Users & Groups
 
 ### Files
 

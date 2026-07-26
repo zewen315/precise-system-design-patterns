@@ -6,20 +6,20 @@ What is a shell
 
 What are commands of a shell?
 - Built-in Commands (cd: chdir)
-  - ```type cd ```
-  - ```help```
-  - ```command -V cd```
+  - `type cd `
+  - `help`
+  - `command -V cd`
 - External Commands
 
 How to check the current shell?
-  - ```echo $SHELL```
-  - ```echo $0```
-  - ```ps -p $$```
-  - ```cat /etc/shells```
+  - `echo $SHELL`
+  - `echo $0`
+  - `ps -p $$`
+  - `cat /etc/shells`
 
 How does a shell start?
-  - ssh (parent process is ```sshd```)
-  - login (parent process is ```getty```)
+  - ssh (parent process is `sshd`)
+  - login (parent process is `getty`)
 
 shell vs terminal vs tty
   - A Terminal (or Terminal Emulator) is the application that provides a window for text-based interaction.
@@ -54,3 +54,58 @@ export vs source
 .bash_profile vs .bashrc
 - One-time login initialization
 - Configuration for every Bash session
+
+## Features
+
+### Job control
+
+Commands:
+
+```bash
+jobs
+fg
+bg
+kill
+wait
+```
+
+Keyboard shortcuts:
+```
+Keyboard
+    │
+    ▼
+Terminal Emulator
+(iTerm2 / Terminal.app)
+    │
+    ▼
+PTY Master
+    │
+    ▼
+Kernel TTY Driver
+    │
+    ▼
+Foreground Process Group
+```
+
+For example:
+- `Ctrl-C`
+- `Ctrl-Z`
+- `Ctrl-\`
+
+tty driver: (`stty -a`)
+```
+VINTR     Ctrl-C
+VQUIT     Ctrl-\
+VERASE    Backspace
+VKILL     Ctrl-U
+VEOF      Ctrl-D
+VSTART    Ctrl-Q
+VSTOP     Ctrl-S
+VSUSP     Ctrl-Z
+```
+
+### Command interpretation, Scripting
+
+### History, Tab Completion...
+
+### Environment Management

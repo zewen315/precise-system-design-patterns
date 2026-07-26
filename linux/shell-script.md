@@ -1,6 +1,44 @@
 # Shell Script
 
-## Examples
+## Commonly Used
+
+Easy:
+- sort
+- grep
+- uniq
+- cut
+- tr
+- wc
+
+Hard:
+- find
+- sed
+- awk
+- xargs
+
+---
+
+## Script Arguments
+
+```bash
+echo "$0"   # script name
+echo "$1"   # first argument
+echo "$#"   # number of arguments
+echo "$@"   # all arguments
+```
+
+Exit Status
+
+```bash
+exit 0      # success
+exit 1      # failure
+
+echo $?     # previous command's exit code
+```
+
+---
+
+## Basics
 
 Variables
 
@@ -129,22 +167,3 @@ Comments
 # This is a comment
 ```
 ---
-
-## Script Arguments
-
-```bash
-echo "$0"   # script name
-echo "$1"   # first argument
-echo "$#"   # number of arguments
-echo "$@"   # all arguments
-```
-
-Exit Status
-
-```bash
-exit 0      # success
-exit 1      # failure
-
-echo $?     # previous command's exit code
-```
-
