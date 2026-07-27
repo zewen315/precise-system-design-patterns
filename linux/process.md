@@ -6,6 +6,25 @@
 
 Resource of a process:
 
+task_struct
+- CPU context
+- Memory
+  - Code
+  - Heap
+  - Stack
+  - ...
+- Page table, VMA, mmap
+- Open files
+- cwd, root
+- Credentials
+- Signal
+  - pending, blocked
+  - signal handlers
+- Scheduler
+- PID
+- IPC
+- ...
+
 What is a PID?
 - `cat /proc/sys/kernel/pid_max`
 - `echo $$`
@@ -27,6 +46,14 @@ TASK_TRACED
 EXIT_ZOMBIE
 EXIT_DEAD
 ```
+
+### Syscalls
+
+fork()
+- 
+
+execve()
+- 
 
 ### Lifecycle
 
@@ -66,6 +93,7 @@ Process Lifecycle
 
 ### How
 
+Signal vs Realtime Signal
 
 ### Commonly used
 

@@ -66,11 +66,34 @@ How does `lscpu` works?
 
 ### Memory
 
+Commands: `free -h`, `ps`, `pmap`, `vmstat`,
+Others: `slabtop`, `dmesg`
+
+- `/sys/devices/system/memory/`
+- `/proc/meminfo`
+- `/proc/<pid>/status`
+- `/proc/<pid>/maps`, `/proc/<pid>/smaps`
+
 ### Process
 
 (process.md)
 
+- Lifecycle
+- Signal
+- Thread
+
 ### Filesystem
+
+What is a file?
+- 
+
+File types:
+- 
+
+Hardlink vs Softlink
+- 
+
+Virtual File System (VFS)
 
 ### Network
 
