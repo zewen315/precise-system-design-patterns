@@ -25,6 +25,16 @@ task_struct
 - IPC
 - ...
 
+Process Address Spac
+- Environment Variables
+- Command Line Arguments (argv)
+- Stack
+- Heap
+- Data
+- Code
+
+Environment Variables
+
 What is a PID?
 - `cat /proc/sys/kernel/pid_max`
 - `echo $$`
@@ -50,10 +60,21 @@ EXIT_DEAD
 ### Syscalls
 
 fork()
-- 
+- Creates a new process descriptor (task_struct)
+- Copies the CPU context
+- Copies the virtual memory mappings
+- Enables Copy-on-Write (COW)
+- Duplicates the file descriptor table
+- Copies process attributes
+- Places the child in the scheduler's run queue
 
 execve()
-- 
+- Loads the new executable
+- Destroys the old address space
+- Creates a new address space
+- Copies command-line arguments and environment variables
+- Resets the CPU context
+- Starts executing the new program
 
 ### Lifecycle
 
@@ -112,5 +133,3 @@ Signal vs Realtime Signal
 | `SIGCONT` | 18* | `kill -CONT` | Continue | ✔ | Resumes a stopped process. |
 | `SIGSTOP` | 19* | `kill -STOP` | Stop | ❌ | Immediately stops a process. Cannot be caught or ignored. |
 | `SIGTSTP` | 20* | `Ctrl+Z` | Stop | ✔ | Stops a foreground process. Unlike `SIGSTOP`, it can be handled or ignored. |
-
-## Threads

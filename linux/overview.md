@@ -64,6 +64,14 @@ How does `lscpu` works?
 - `/sys/devices/system/cpu`
 - `/proc/cpuinfo`
 
+system calls:
+-
+-
+-
+
+What is a context switch?
+
+
 ### Memory
 
 Commands: `free -h`, `ps`, `pmap`, `vmstat`,
@@ -73,6 +81,17 @@ Others: `slabtop`, `dmesg`
 - `/proc/meminfo`
 - `/proc/<pid>/status`
 - `/proc/<pid>/maps`, `/proc/<pid>/smaps`
+
+system calls:
+-
+-
+-
+
+What is swap?
+
+What is page table? page fault? page Cache?
+
+What is virtual memory?
 
 ### Process
 
@@ -97,4 +116,12 @@ Virtual File System (VFS)
 
 ### Network
 
+(network.md)
+
+Commands: 
+
+epoll() vs select()
+
 ### Systemd
+
+(systemd.md)
