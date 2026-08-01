@@ -63,22 +63,29 @@ Instead of treating Linux as a collection of commands, this repository focuses o
 ## Repository Structure
 
 ```text
-linux-notes/
-├── processes/
-├── scheduling/
-├── memory/
-├── system-calls/
-├── shell/
-├── signals/
-├── tty/
-├── filesystem/
-├── networking/
-├── synchronization/
-├── containers/
-└── references/
+linux/
+├── overview.md       # boot process, kernel vs user space, packages, entry points into every topic below
+├── process.md         # process lifecycle, syscalls, ELF, signals
+├── thread.md            # threads vs processes, synchronization primitives, futex
+├── memory.md               # virtual memory, page tables, page cache, swap, OOM killer
+├── filesystem.md             # inodes, links, VFS, mounting, filesystem types
+├── users.md                    # users, groups, permissions, sudo/PAM
+├── network.md                    # sockets, TCP lifecycle, select/poll/epoll, NIC/DMA
+├── containers.md                   # namespaces, cgroups, capabilities
+├── systemd.md                        # units, targets, dependencies, journald
+├── shell.md                            # shell, TTY/PTY, job control
+└── tools/                                # command-line reference by category
+    ├── process.md
+    ├── memory.md
+    ├── disk.md
+    ├── network.md
+    ├── journal.md
+    └── trace.md
 ```
 
-Each directory contains topic-oriented notes, diagrams, code snippets, and links to additional resources.
+Still open (not yet covered): CPU scheduling internals (CFS, nice/priority), and a deeper pass on IPC (pipes, message queues, shared memory) and security modules (SELinux/AppArmor) beyond what's in `containers.md`.
+
+Each file is topic-oriented notes: concise facts, diagrams, and the important questions to be able to answer, not full documentation.
 
 ---
 
