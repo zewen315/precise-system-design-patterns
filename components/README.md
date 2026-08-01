@@ -22,6 +22,7 @@
 ## Networking & Delivery
 
 * [load-balancer.md](load-balancer.md) — Traffic distribution: L4 vs L7, algorithms, health checks.
+* [nginx.md](nginx.md) — Reverse proxy / web server / load balancer: event-driven architecture, proxying, caching, rate limiting.
 * [cdn.md](cdn.md) — Content delivery: caching strategy, invalidation, origin shielding.
 * [api-gateway.md](api-gateway.md) — Single entry point: auth, routing, rate limiting.
 * [websocket.md](websocket.md) — Real-time delivery: long-lived connections, fan-out, scaling.
